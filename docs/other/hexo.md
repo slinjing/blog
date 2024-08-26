@@ -97,7 +97,7 @@ $ npm install
 ```shell
 $ hexo generate
 ```
-接下来启动服务器。默认情况下，访问网址为： http://localhost:4000/
+接下来启动服务器。默认情况下，访问网址为：`http://localhost:4000/`
 ```shell
 $ hexo server
 ```
