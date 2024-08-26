@@ -21,6 +21,7 @@ export default defineConfig({
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Docker', link: '/docker/index' },
+      { text: 'Linux', link: '/linux/index' },
       { text: 'Examples', link: '/markdown-examples' },
     ],
 
@@ -41,7 +42,18 @@ export default defineConfig({
             { text: 'Docker排错', link: '/docker/debug' },
           ]
         }
-      ],    
+      ],   
+      '/linux': [
+        {
+          text: 'Linux',
+          collapsed: false,
+          items: [
+            { text: 'Linux', link: '/linux/index' },
+            { text: '部署NTP服务', link: '/linux/ntp' },
+            { text: 'Linux排错', link: '/linux/debug' },
+          ]
+        }
+        ], 
 
       '/': [
         {
