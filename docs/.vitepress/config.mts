@@ -22,6 +22,7 @@ export default defineConfig({
       { text: 'Home', link: '/' },
       { text: 'Docker', link: '/docker/index' },
       { text: 'Linux', link: '/linux/index' },
+      { text: 'MySQL', link: '/mysql/index' },
       { text: 'Examples', link: '/markdown-examples' },
     ],
 
@@ -54,6 +55,17 @@ export default defineConfig({
           ]
         }
         ], 
+        '/mysql': [
+          {
+            text: 'MySQL',
+            collapsed: false,
+            items: [
+              { text: 'MySQL安装', link: '/mysql/install' },
+              { text: 'MySQL监控', link: '/mysql/monitor' },
+              { text: 'MySQL排错', link: '/mysql/debug' },
+            ]
+          }
+          ],
 
       '/': [
         {
