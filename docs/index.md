@@ -11,15 +11,18 @@ hero:
       text: 博客
       link: https://slinjing.github.io/
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: 邮箱
+      link: mailto:878057672@qq.com
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Home
+    details: 我的文档
+    link: /
+  - title: Comment
+    details: 留言
+    link: https://github.com/slinjing/vitepress-docs/issues
+  - title: Anout
+    details: 关于
+    link: /anout
 ---
 
