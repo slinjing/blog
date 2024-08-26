@@ -42,7 +42,7 @@ export default defineConfig({
           text: 'Docker',
           collapsed: false,
           items: [
-            { text: 'Docker', link: '/docker/index' },
+            // { text: 'Docker', link: '/docker/index' },
             { text: 'Docker安装', link: '/docker/install-docker' },
             { text: 'Docker网络', link: '/docker/docker-network' },
             { text: 'Docker存储', link: '/docker/docker-storage' },
@@ -58,7 +58,7 @@ export default defineConfig({
           text: 'Linux',
           collapsed: false,
           items: [
-            { text: 'Linux', link: '/linux/index' },
+            // { text: 'Linux', link: '/linux/index' },
             { text: '部署NTP服务', link: '/linux/ntp' },
             { text: 'Linux排错', link: '/linux/debug' },
           ]
@@ -103,8 +103,8 @@ export default defineConfig({
 
     //页脚
     footer: {
-      message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2019-present Evan You'
+      // message: 'Released under the MIT License.',
+      copyright: 'Copyright © 2021 jingshulin. All rights reserved'
     },
 
     socialLinks: [
