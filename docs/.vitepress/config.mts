@@ -24,6 +24,15 @@ export default defineConfig({
       { text: 'Linux', link: '/linux/index' },
       { text: 'MySQL', link: '/mysql/index' },
       { text: 'Examples', link: '/markdown-examples' },
+      {
+        text: '其他',
+        items: [
+          { text: 'Hexo搭建博客', link: '/other/hexo' },
+          { text: 'Kafka集群部署', link: '/other/kafka' },
+          { text: 'Harbor部署', link: '/other/harbor' },
+          { text: '常用工具', link: '/other/tools' },
+        ]
+      }
     ],
 
     //侧边栏
@@ -66,6 +75,19 @@ export default defineConfig({
             ]
           }
           ],
+
+          '/other': [
+            {
+              text: '其他',
+              collapsed: false,
+              items: [
+                { text: 'Hexo搭建博客', link: '/other/hexo' },
+                { text: 'Kafka集群部署', link: '/other/kafka' },
+                { text: 'Harbor部署', link: '/other/harbor' },
+                { text: '常用工具', link: '/other/tools' },
+              ]
+            }
+            ],
 
       '/': [
         {
