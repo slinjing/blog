@@ -1,10 +1,12 @@
-# 部署NTP服务
+# 时间同步
 
-## 安装NTP
+## NTP
+
+### 安装NTP
 ```shell
 $ yum -y install ntp
 ```
-## 配置
+### 配置
 修改配置文件`/etc/ntp.conf`，修改客户端网段限制，并注释默认的时间同步源，添加新的时间同步源。
 ```shell
 restrict 192.168.0.0 mask 255.255.0.0 nomodify notrap
@@ -25,7 +27,7 @@ $ ntpq -p
  120.25.115.20   .INIT.          16 u    -   64    0    0.000    0.000   0.000
 ```
 
-## 客户端配置
+### 客户端配置
 ```shell
 $ ntpdate 192.168.0.1
 $ crontab -e

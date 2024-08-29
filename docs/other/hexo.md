@@ -1,24 +1,19 @@
-# Hexo框架+butterfly主题搭建博客
+# Hexo搭建博客
 
 
 ## Hexo概述
-Hexo是一个快速、简洁且高效的博客框架，它能够将Markdown文档渲染成HTML，这样就可以在很短的时间内创建出网站的静态内容。要使用Hexo来搭建博客，建议参考[Hexo 官网](https://hexo.io/zh-cn/)，官方文档内容非常全面，下面记录一次部署过程。
+Hexo是一个快速、简洁且高效的博客框架，它能够将Markdown文档渲染成HTML，这样就可以在很短的时间内创建出网站的静态内容。
+
+官网：https://hexo.io
 
 ## 安装前提
-安装Hexo非常简单，只需要先安装Node.js环境和Git环境，Node.js是一个能够在服务器端运行 JavaScript代码的环境, Git是版本控制工具。
+安装Hexo非常简单，只需要先安装Node.js环境和Git环境，Node.js是一个能够在服务器端运行JavaScript代码的环境, Git是版本控制工具。
 
 ## 安装Node.js
-### Windows：
-Node.js官方提供了安装程序，前往[Node.js 官网](https://nodejs.org/en/)下载安装即可，安装时注意记得勾选Add to PATH选项，安装完成后验证。
-```shell
-$ node --version
-v20.15.0
+Windows系统系统参考[Windows安装Node.js。](/docker/debug.md)
 
-$ npm --version
-10.7.0
-```
-### Linux
-Linux平台安装Node.js参考[文档](https://github.com/nodesource/distributions?tab=readme-ov-file#enterprise-linux-based-distributions)
+Linux系统系统参考[Linux安装Node.js。](/docker/debug.md)
+
 
 ## 安装Git
 ### Windows
@@ -112,7 +107,7 @@ theme: butterfly # 这里填主题文件夹的名称
 ```
 重启服务器后就可以看到效果了，但是此时页面也比较单调，想要更改一些功能和配置可以参考[文档。](https://butterfly.js.org/categories/Docs%E6%96%87%E6%AA%94/)
 
-## 在GitHub Pages上部署Hexo
+## GitHub Pages部署
 
 当完成以上步骤后现在就可以开始部署博客了，这里选择使用GitHub Pages部署，主要优点是免费，当然也可以部署到自己的服务上。
 
