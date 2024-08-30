@@ -63,3 +63,7 @@
 ## 加速器
 ### Watt Toolkit
 地址：https://steampp.net/
+
+## 静态站点生成器
+### VitePress
+地址：https://vitepress.dev/

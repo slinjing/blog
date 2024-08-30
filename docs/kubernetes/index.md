@@ -13,17 +13,17 @@ Kubernetes 集群由一个控制平面和若干运行（Pod）的工作节点组
 控制平面组件负责管理整个集群的状态，比如资源调度、状态检测和响应集群事件等。控制平面组件可以在集群中的任何节点上运行，但通常会部署在同一节点，并且默认情况下此节点上不会运行业务 Pod。
 
 ### kube-apiserver
-kube-apiserver 是 Kubernetes 的核心组件之一，该组件负责提供集群管理的 API 接口、接受其他组件之间的数据交互和请求，是 Kubernetes 控制平面的前端。
+kube-apiserver 是 Kubernetes 的核心组件之一，该组件负责提供集群管理的 API 接口、并提供认证、授权、访问控制、注册和发现等功能，是 Kubernetes 控制平面的前端。
 kube-apiserver 设计上就支持水平扩缩，可以通过部署多个实例来实现高可用和负载均衡。
 
 ### etcd
-etcd 是一款分布式、高可用的 key-value 存储数据库。基于Go语言实现，在 Kubernetes 集群使用 etcd 作为数据库，主要用于共享配置和服务发现。
+etcd 是一款分布式、高可用的 key-value 存储数据库。基于Go语言实现，在 Kubernetes 集群中它存储集群的配置和状态。
 
 ### kube-scheduler
-kube-scheduler 负责分配调度 Pod 到集群内的节点上，它监听 kube-apiserver，查询还未分配 Node 的 Pod，然后根据调度策略将 Pod 分配到指定节点。
+kube-scheduler 负责分配调度 Pod 到集群内的节点上，它监听 kube-apiserver，并根据预定的调度策略将 Pod 调度到指定节点上。
 
 ### kube-controller-manager
-kube-controller-manager 是 Kubernetes 的大脑，它通过 apiserver 监控整个集群的状态，并确保集群处于预期的工作状态。
+kube-controller-manager 是 Kubernetes 的大脑，它通过 apiserver 监控整个集群的状态，并确保集群处于预期的工作状态。比如故障检测、自动扩展、滚动更新等。
 
 ## 工作节点组件
 工作节点组件会在 Kubernetes 集群每个节点上运行，负责维护运行 Pod 并提供 Kubernetes 运行时环境。
@@ -32,5 +32,14 @@ kube-controller-manager 是 Kubernetes 的大脑，它通过 apiserver 监控整
 kubelet 会在 Kubernetes 集群中每个 Node 节点上运行，它接收 Master 发来的指令，管理 Pod 及 Pod 中的容器。每个 Kubelet 进程会在 API Server 上注册所在Node节点的信息，定期向 Master 节点汇报该节点的资源使用情况，并通过 cAdvisor 监控节点和容器的资源。
 
 ### kube-proxy
+kube-proxy 负责为 Service 提供 cluster 内部的服务发现和负载均衡。
 
-## 资源对象
+### Container runtime
+Container runtime 负责镜像管理以及 Pod 和容器的真正运行（CRI），在1.24版本之前默认的容器运行时为 Docker。
+
+## 插件
+### kube-dns 
+kube-dns 负责为整个集群提供 DNS 服务
+
+### Ingress Controller 
+Ingress Controller 为服务提供外网入口

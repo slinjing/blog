@@ -1,7 +1,4 @@
-# Hexo搭建博客
-
-
-## Hexo概述
+# Hexo 博客部署
 Hexo是一个快速、简洁且高效的博客框架，它能够将Markdown文档渲染成HTML，这样就可以在很短的时间内创建出网站的静态内容。
 
 官网：https://hexo.io
