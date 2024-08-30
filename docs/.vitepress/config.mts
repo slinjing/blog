@@ -22,17 +22,16 @@ export default defineConfig({
       { text: 'Home', link: '/' },
       { text: 'Docker', link: '/docker/index' },
       { text: 'Linux', link: '/linux/index' },
-      { text: 'MySQL', link: '/mysql/index' },
+      { text: 'Kubernetes', link: '/kubernetes/index' },
       { text: 'Examples', link: '/markdown-examples' },
       {
-        text: '其他',
+        text: '中间件',
         items: [
-          { text: 'Hexo搭建博客', link: '/other/hexo' },
-          { text: 'Kafka集群部署', link: '/other/kafka' },
-          { text: 'Harbor部署', link: '/other/harbor' },
-          { text: '常用工具', link: '/other/tools' },
+          { text: 'MySQL', link: '/mysql/index' },
+          { text: 'Nginx', link: '/nginx/index' },
         ]
-      }
+      },
+      { text: '其他', link: '/other/tools' }
     ],
 
     //侧边栏
@@ -64,6 +63,7 @@ export default defineConfig({
           ]
         }
         ], 
+
         '/mysql': [
           {
             text: 'MySQL',
@@ -76,15 +76,26 @@ export default defineConfig({
           }
           ],
 
+          '/kubernetes': [
+            {
+              text: 'kubernetes',
+              collapsed: false,
+              items: [
+                { text: '安装工具', link: '/kubernetes/install' },
+
+              ]
+            }
+            ],
+
           '/other': [
             {
               text: '其他',
               collapsed: false,
               items: [
+                { text: '常用工具', link: '/other/tools' },
                 { text: 'Hexo搭建博客', link: '/other/hexo' },
                 { text: 'Kafka集群部署', link: '/other/kafka' },
                 { text: 'Harbor部署', link: '/other/harbor' },
-                { text: '常用工具', link: '/other/tools' },
               ]
             }
             ],
