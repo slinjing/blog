@@ -17,11 +17,18 @@ export default{
       ],
       '/linux': [
         {
-          text: 'Linux',
+          text: 'Linux', link: '/linux/index',
+          // collapsed: false,
+          // items: [
+          //   { text: '部署NTP服务', link: '/linux/ntp' },
+          //   { text: 'Linux排错', link: '/linux/debug' },
+          // ]
+        },
+        {
+          text: '服务部署', 
           collapsed: false,
           items: [
-            // { text: 'Linux', link: '/linux/index' },
-            { text: '部署NTP服务', link: '/linux/ntp' },
+            { text: '时间同步', link: '/linux/ntp' },
             { text: 'Linux排错', link: '/linux/debug' },
           ]
         }
@@ -44,18 +51,27 @@ export default{
           text: 'kubernetes', link: '/kubernetes/index',
         },
         {
-          text: '部署工具', link: '/kubernetes/deploy',
+          text: '集群高可用', 
           collapsed: false,
           items: [
-            { text: 'Kubeasz', link: '/kubernetes/deploy' },
-            { text: 'Kubeadm', link: '/kubernetes/deploy' },
+            { text: 'Kubeasz', link: '/kubernetes/kubeasz' },
+            { text: 'Kubeadm', link: '/kubernetes/Kubeadm' },
           ]
         },
         {
-          text: '资源对象', link: '/kubernetes/objects',
+          text: 'Dashboard', 
           collapsed: false,
           items: [
-            { text: 'ConfigMap', link: '/kubernetes/deploy' },
+            { text: 'Kuboard', link: 'kubernetes/kuboard' },
+            { text: 'Dashboard', link: '/kubernetes/dashboard' },
+          ]
+        },
+        {
+          text: '资源对象', 
+          collapsed: false,
+          items: [
+            { text: 'Pod', link: '/kubernetes/pod' },
+            { text: 'ConfigMap', link: '/kubernetes/configmap' },
           ]
         }
       ],
@@ -64,9 +80,9 @@ export default{
         {
           text: '其他',
           items: [
-            { text: '常用工具', link: '/other/tools' },
-            { text: 'Hexo 博客部署', link: '/other/hexo' },
-            { text: 'Kafka 集群部署', link: '/other/kafka' },
+            { text: 'Tools', link: '/other/tools' },
+            { text: 'Hexo', link: '/other/hexo' },
+            { text: 'ShadowsocksR', link: '/other/ssr' },
           ]
         }
       ],

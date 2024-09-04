@@ -1,8 +1,3 @@
----
-outline: deep
----
-
-# docker
-
-## docker
+# Docker
+Docker 是一个开源的平台，用于开发、交付和运行应用程序。它能够在Windows、macOS、Linux 平台上运行，并将某一应用程序及其依赖项打包至一个容器中，这些容器可以在任何支持 Docker 的环境中运行。容器彼此隔离，但可以通过特定方式进行通信。
 

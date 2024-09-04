@@ -1,5 +1,5 @@
 # Kubernetes
-Kubernetes 是一个开源的容器编排引擎，用来对容器化应用进行自动化部署、扩缩和管理。该项目托管在 CNCF。
+Kubernetes 是一个开源的容器编排引擎，用来对容器化应用进行自动化部署、扩缩和管理。该项目托管在 CNCF。Kubernetes 的目标是让部署容器化的应用简单并且高效，它提供了应用部署，规划，更新，维护的一种机制。
 
 官网：https://kubernetes.io
 
@@ -29,17 +29,17 @@ kube-controller-manager 是 Kubernetes 的大脑，它通过 apiserver 监控整
 工作节点组件会在 Kubernetes 集群每个节点上运行，负责维护运行 Pod 并提供 Kubernetes 运行时环境。
 
 ### kubelet
-kubelet 会在 Kubernetes 集群中每个 Node 节点上运行，它接收 Master 发来的指令，管理 Pod 及 Pod 中的容器。每个 Kubelet 进程会在 API Server 上注册所在Node节点的信息，定期向 Master 节点汇报该节点的资源使用情况，并通过 cAdvisor 监控节点和容器的资源。
+kubelet 会在 Kubernetes 集群中每个 Node 节点上运行，接收 Master 发来的指令，管理 Pod 及 Pod 中的容器。每个 Kubelet 进程会在 API Server 上注册所在Node节点的信息，定期向 Master 节点汇报该节点的资源使用情况，并通过 cAdvisor 监控节点和容器的资源。
 
 ### kube-proxy
-kube-proxy 负责为 Service 提供 cluster 内部的服务发现和负载均衡。
+kube-proxy 是 Kubernetes 集群中的网络代理，负责为 Service 提供集群内部的服务发现和负载均衡。
 
 ### Container runtime
-Container runtime 负责镜像管理以及 Pod 和容器的真正运行（CRI），在1.24版本之前默认的容器运行时为 Docker。
+Container runtime 负责镜像管理以及容器的运行。Kubernetes 支持多种容器运行环境，包括 Docker、Containerd、CRI-O 以及 Kubernetes CRI的其他容器运行时，在1.24版本之后不支持 Docker。
 
 ## 插件
 ### kube-dns 
-kube-dns 负责为整个集群提供 DNS 服务
+kube-dns 负责为整个集群提供 DNS 服务。
 
 ### Ingress Controller 
-Ingress Controller 为服务提供外网入口
+Ingress Controller 为服务提供外网入口。

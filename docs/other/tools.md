@@ -67,3 +67,6 @@
 ## 静态站点生成器
 ### VitePress
 地址：https://vitepress.dev/
+
+### Hexo
+地址：https://hexo.io/
