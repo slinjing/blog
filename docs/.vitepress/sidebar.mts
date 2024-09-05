@@ -20,16 +20,16 @@ export default{
           text: 'Linux', link: '/linux/index',
           // collapsed: false,
           // items: [
-          //   { text: '部署NTP服务', link: '/linux/ntp' },
-          //   { text: 'Linux排错', link: '/linux/debug' },
+          //   { text: '目录管理', link: '/linux/ntp' },
+          //   { text: '用户管理 ', link: '/linux/debug' },
           // ]
         },
         {
           text: '服务部署', 
-          collapsed: false,
+          // collapsed: false,
           items: [
             { text: '时间同步', link: '/linux/ntp' },
-            { text: 'Linux排错', link: '/linux/debug' },
+            // { text: 'Linux排错', link: '/linux/debug' },
           ]
         }
       ],
