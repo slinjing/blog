@@ -1,12 +1,7 @@
 # Harbor
-Harbor 是由 VMware 公司开源的容器镜像仓库。该项目托管在 CNCF。
+Harbor 是由 VMware 公司开源的容器镜像仓库。该项目托管在 CNCF。在本地部署 Harbor 私有镜像仓库后，其他需要拉取镜像的主机通过 Harbor 拉取镜像。
 
 官网：https://goharbor.io/
-
-随着Docker的使用，让环境部署变得更加简单，但是Docker运行容器的前提是必须要有镜像，如果本地没有镜像的话则Docker引擎会去镜像仓库把镜像拉取到本地后再运行。并且很多镜像需要去国外镜像仓库拉取，导致镜像经常拉取失败，所以在生产环境中不能采取这种方式拉取镜像，可以在本地部署一个镜像仓库，再把需要的镜像下载导入到自己的镜像仓库，这样其他需要拉取镜像的主机就可以直接去私有镜像仓库拉取。而私有镜像仓库可以选择`Registry`或`Harbor`，企业中Harbor会用得比较多，它是由VMware公司开源的私有镜像仓库。
-
-官网：https://goharbor.io/
-
 
 ## 前提条件
 安装Harbor需要有Docker和Docker Compose环境，如何安装Docker和Docker Compose可以前往Docker栏目。
@@ -44,7 +39,7 @@ $ ./install.sh
 Harbor安装完成之后通过docker-compose来管理，执行`docker-compose ps`则可以查看到对应的容器状态：![img](/harbor.png)
 
 
-## 推送镜像到Harbor
+## 推送镜像到 Harbor
 当Harbor安装完成后就可以尝试推送镜像到Harbor，Harbor还支持基于角色访问控制，我这里就不创建其他用户，直接使用管理员账户演示了。由于Harbor配置了域名，如果没有dns的话需要手动配置hosts，命令如下：
 ```shell
 $ echo 'Harbor_IP harbor.gt.com' >> /etc/hosts
@@ -58,7 +53,7 @@ $ docker tag nginx:latest  harbor.gt.com/library/nginx:latest
 $ docker push harbor.gt.com/library/nginx:latest
 ```
 
-## 配置信任Harbor证书
+## 配置信任 Harbor 证书
 由于Harbor仓库使用了自签证书，所以当docker客户端拉取自建Harbor仓库镜像前必须配置信任Harbor证书，否则出现如下错误：
 ```shell
 $ docker pull harbor.gt.com:1443/library/nginx:latest
@@ -70,7 +65,7 @@ $ mkdir -p /etc/docker/certs.d/harbor.gt.com:1443/
 $ scp 10.10.100.32:/home/harbor/ssl/tls.cert /etc/docker/certs.d/harbor.gt.com:1443/ca.crt
 ```
 
-## K8S使用Harbor
+## K8S 使用 Harbor
 如果镜像保存在Harbor中的公开项目中，那么只需要在Yaml文件中简单指定镜像地址即可，例如：
 ```yaml
 apiVersion: v1

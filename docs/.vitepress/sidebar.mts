@@ -18,18 +18,22 @@ export default{
       '/linux': [
         {
           text: 'Linux', link: '/linux/index',
-          // collapsed: false,
-          // items: [
-          //   { text: '目录管理', link: '/linux/ntp' },
-          //   { text: '用户管理 ', link: '/linux/debug' },
-          // ]
+          collapsed: false,
+          items: [
+            { text: '文件目录', link: '/linux/file-dir' },
+            // { text: '系统管理', link: '/linux/system' },
+            { text: '常用命令 ', link: '/linux/command' },
+            { text: '文本编辑', link: '/linux/vim' },
+            { text: 'Shell 脚本', link: '/linux/shell' },
+            // { text: '时间同步', link: '/linux/ntp' },
+          ]
         },
         {
-          text: '服务部署', 
+          text: '配置', 
           // collapsed: false,
           items: [
+            { text: '配置网卡', link: '/linux/network' },
             { text: '时间同步', link: '/linux/ntp' },
-            // { text: 'Linux排错', link: '/linux/debug' },
           ]
         }
       ],
