@@ -16,6 +16,7 @@ export default[
         { text: 'Gitlab', link: '/cicd/gitlab' },
         { text: 'Harbor', link: '/cicd/harbor' },
         { text: 'Jenkins', link: '/cicd/jenkins' },
+        { text: 'Ansible', link: '/cicd/ansible' },
       ]
     },
     {

@@ -11,31 +11,45 @@ export default{
             { text: 'Dockerfile', link: '/docker/docker-file' },
             { text: 'Docker Compose', link: 'docker/docker-compose' },
             { text: 'Portainer', link: '/docker/portainer' },
-            { text: 'Docker排错', link: '/docker/debug' },
+            { text: '镜像加速', link: '/docker/debug' },
+          ]
+        }
+      ],
+      '/prometheus': [
+        {
+          text: 'Prometheus', link: '/prometheus/index',
+          collapsed: false,
+          items: [
+            { text: 'PromQL', link: '/prometheus/PromQL' },
           ]
         }
       ],
       '/linux': [
         {
           text: 'Linux', link: '/linux/index',
-          collapsed: false,
-          items: [
-            { text: '文件目录', link: '/linux/file-dir' },
-            // { text: '系统管理', link: '/linux/system' },
-            { text: '常用命令 ', link: '/linux/command' },
-            { text: '文本编辑', link: '/linux/vim' },
-            { text: 'Shell 脚本', link: '/linux/shell' },
-            // { text: '时间同步', link: '/linux/ntp' },
-          ]
-        },
-        {
-          text: '配置', 
           // collapsed: false,
           items: [
+            // { text: '文件目录', link: '/linux/file-dir' },
+            // { text: '系统管理', link: '/linux/system' },
+            { text: '常用命令 ', link: '/linux/command' },
+            // { text: '文本编辑', link: '/linux/vim' },
+            // { text: 'Shell 脚本', link: '/linux/shell' },
+            // { text: '时间同步', link: '/linux/ntp' },
             { text: '配置网卡', link: '/linux/network' },
             { text: '时间同步', link: '/linux/ntp' },
+            { text: '磁盘管理', link: '/linux/disk' },
+            { text: 'Shell 脚本', link: '/linux/shell' },
           ]
-        }
+        },
+        // {
+        //   text: '配置', 
+        //   // collapsed: false,
+        //   items: [
+        //     { text: '配置网卡', link: '/linux/network' },
+        //     { text: '时间同步', link: '/linux/ntp' },
+        //     { text: '磁盘管理', link: '/linux/disk' },
+        //   ]
+        // }
       ],
 
       '/mysql': [
@@ -86,6 +100,8 @@ export default{
           items: [
             { text: 'Tools', link: '/other/tools' },
             { text: 'Hexo', link: '/other/hexo' },
+            { text: 'RAID', link: '/other/raid' },
+            { text: 'Markdown', link: '/other/markdown' },
             { text: 'ShadowsocksR', link: '/other/ssr' },
           ]
         }
@@ -99,7 +115,17 @@ export default{
             { text: 'Gitlab', link: '/cicd/gitlab' },
             { text: 'Harbor', link: '/cicd/harbor' },
             { text: 'Jenkins', link: '/cicd/jenkins' },
+            { text: 'Ansible', link: '/cicd/ansible' },
           ]
         }
       ],    
+
+      '/python': [
+        {
+          text: 'Python', link: '/python/index',
+          items: [
+            { text: 'psutil', link: '/python/psutil' },
+          ]
+        }
+      ],      
 }
