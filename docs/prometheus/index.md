@@ -50,7 +50,7 @@ ExecStart=/home/prometheus/prometheus \
 [Install]
 WantedBy=multi-user.target
 ```
-完成后载入配置并启动 Prometheus 服务，验证本地9090端口，访问：http://localhost:9090。
+完成后载入配置并启动 Prometheus 服务，验证本地9090端口，访问：`http://localhost:9090`。
 ```shell
 systemctl daemon-reload
 systemctl enable prometheus --now
