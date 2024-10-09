@@ -71,7 +71,7 @@ psutil.net_if_stats()
 
 ## 进程管理方法
 
-### 进程信息
+> 进程信息
 ```python
 import psutil
 # 列出所有进程PID
@@ -110,7 +110,8 @@ p.connections()
 p.num_threads()
 ```
 
-### popen类的使用
+> popen类的使用
+
 psutil 提供的 popen 类的作用是获取用户启动的应用程序进程信息，以便跟踪程序进程的运行状态。
 ```python
 import psutil
@@ -125,5 +126,5 @@ p.username（）
 p.communicate（）
 
 # 得到进程运行的CPU时间
-p.cpu_times（） #得到进程运行的CPU时间，更多方法见上一小节
+p.cpu_times（） 
 ```

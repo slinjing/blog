@@ -64,6 +64,17 @@ export default{
         }
       ],
 
+      'elk': [
+        {
+          text: 'ELK', link: '/elk/index',
+          collapsed: false,
+          items: [
+            { text: 'ELK安装', link: '/elk/index' },
+
+          ]
+        }
+      ],
+
       '/kubernetes': [
         {
           text: 'kubernetes', link: '/kubernetes/index',
@@ -98,24 +109,23 @@ export default{
         {
           text: '其他',
           items: [
-            { text: 'Tools', link: '/other/tools' },
+            { text: 'Yaml', link: '/other/yaml' },
             { text: 'Hexo', link: '/other/hexo' },
             { text: 'RAID', link: '/other/raid' },
+            { text: 'Tools', link: '/other/tools' },
+            { text: 'Harbor', link: '/other/harbor' },
             { text: 'Markdown', link: '/other/markdown' },
-            { text: 'ShadowsocksR', link: '/other/ssr' },
+            { text: 'SSR', link: '/other/ssr' },
           ]
         }
       ],
 
-      '/cicd': [
+      '/gitlab': [
         {
-          text: 'CI/CD',
-          collapsed: false,
+          text: 'Gitlab', link: '/gitlab/index',
+          // collapsed: false,
           items: [
-            { text: 'Gitlab', link: '/cicd/gitlab' },
-            { text: 'Harbor', link: '/cicd/harbor' },
-            { text: 'Jenkins', link: '/cicd/jenkins' },
-            { text: 'Ansible', link: '/cicd/ansible' },
+            // { text: 'Gitlab', link: '/gitlab/index' },
           ]
         }
       ],    

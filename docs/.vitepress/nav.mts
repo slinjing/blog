@@ -13,15 +13,15 @@ export default[
     {
       text: 'CI/CD',
       items: [
-        { text: 'Gitlab', link: '/cicd/gitlab' },
-        { text: 'Harbor', link: '/cicd/harbor' },
-        { text: 'Jenkins', link: '/cicd/jenkins' },
+        { text: 'Gitlab', link: '/gitlab/index' },
         { text: 'Ansible', link: '/cicd/ansible' },
+        { text: 'Jenkins', link: '/cicd/jenkins' },
       ]
     },
     {
       text: '中间件',
       items: [
+        { text: 'ELK', link: '/elk/index' },
         { text: 'MySQL', link: '/mysql/index' },
         { text: 'Nginx', link: '/nginx/index' },
         { text: 'Kafka', link: '/other/kafka' },

@@ -7,8 +7,11 @@ import nav from './nav.mjs'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: "/vitepress-docs/",
-
-  title: "Docs",
+  //数学方程
+  // markdown: {
+  //   math: true
+  // },
+  title: "Jingshulin",
   description: "A VitePress Site",
   //文章更新时间
   lastUpdated: true,
