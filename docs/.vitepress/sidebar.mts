@@ -116,6 +116,8 @@ export default{
             { text: 'Harbor', link: '/other/harbor' },
             { text: 'Markdown', link: '/other/markdown' },
             { text: 'SSR', link: '/other/ssr' },
+            { text: '交换机 NTP 时钟同步', link: '/other/net' },
+            
           ]
         }
       ],
