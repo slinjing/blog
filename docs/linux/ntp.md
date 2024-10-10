@@ -107,6 +107,7 @@ server 11.0.1.70 iburst
 
 > 扩展命令
 ```shell
+chronyc clients # 查看客户端
 timedatectl status # 查看时间同步状态
 timedatectl set-ntp true # 开启网络时间同步
 chronyc sources -v # 查看 ntp server
