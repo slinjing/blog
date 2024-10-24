@@ -7,9 +7,9 @@ Hexo是一个快速、简洁且高效的博客框架，它能够将Markdown文�
 安装Hexo非常简单，只需要先安装Node.js环境和Git环境，Node.js是一个能够在服务器端运行JavaScript代码的环境, Git是版本控制工具。
 
 ## 安装Node.js
-Windows系统系统参考[Windows安装Node.js。](/docker/debug.md)
+Windows系统系统参考Windows安装Node.js。
 
-Linux系统系统参考[Linux安装Node.js。](/docker/debug.md)
+Linux系统系统参考Linux安装Node.js。
 
 
 ## 安装Git

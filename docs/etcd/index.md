@@ -3,7 +3,7 @@
 
 `etcd` 官网：[https://etcd.io/](https://etcd.io/)。
 
-`etcd` Github：[github.com/etcd-io/etcd](github.com/etcd-io/etcd)。
+`etcd` Github：[github.com/etcd-io/etcd](https://github.com/etcd-io/etcd)。
 
 
 ![](/etcd.png)
