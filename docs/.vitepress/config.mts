@@ -6,7 +6,7 @@ import nav from './nav.mjs'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: "/vitepress-docs/",
+  base: "/blog/",
   //数学方程
   // markdown: {
   //   math: true

@@ -1,21 +1,14 @@
+import docker from './sidebar/docker.mts'
+import kubernetes from './sidebar/kubernetes.mts'
+import python from './sidebar/python.mts'
+import linux from './sidebar/linux.mts'
+
 export default{
-    '/docker': [
-        {
-          text: 'Docker',
-          collapsed: false,
-          items: [
-            // { text: 'Docker', link: '/docker/index' },
-            { text: 'Docker安装', link: '/docker/install-docker' },
-            { text: 'Docker网络', link: '/docker/docker-network' },
-            { text: 'Docker存储', link: '/docker/docker-storage' },
-            { text: 'Dockerfile', link: '/docker/docker-file' },
-            { text: 'Docker Compose', link: 'docker/docker-compose' },
-            { text: 'Portainer', link: '/docker/portainer' },
-            { text: '镜像加速', link: '/docker/debug' },
-          ]
-        }
-      ],
-      '/prometheus': [
+    '/docker': docker,
+    '/kubernetes': kubernetes,
+    '/python': python,
+    '/linux': linux,
+    '/prometheus': [
         {
           text: 'Prometheus', link: '/prometheus/index',
           collapsed: false,
@@ -24,33 +17,7 @@ export default{
           ]
         }
       ],
-      '/linux': [
-        {
-          text: 'Linux', link: '/linux/index',
-          // collapsed: false,
-          items: [
-            // { text: '文件目录', link: '/linux/file-dir' },
-            // { text: '系统管理', link: '/linux/system' },
-            { text: '常用命令 ', link: '/linux/command' },
-            // { text: '文本编辑', link: '/linux/vim' },
-            // { text: 'Shell 脚本', link: '/linux/shell' },
-            // { text: '时间同步', link: '/linux/ntp' },
-            { text: '配置网卡', link: '/linux/network' },
-            { text: '时间同步', link: '/linux/ntp' },
-            { text: '磁盘管理', link: '/linux/disk' },
-            { text: 'Shell 脚本', link: '/linux/shell' },
-          ]
-        },
-        // {
-        //   text: '配置', 
-        //   // collapsed: false,
-        //   items: [
-        //     { text: '配置网卡', link: '/linux/network' },
-        //     { text: '时间同步', link: '/linux/ntp' },
-        //     { text: '磁盘管理', link: '/linux/disk' },
-        //   ]
-        // }
-      ],
+
 
       '/mysql': [
         {
@@ -75,35 +42,17 @@ export default{
         }
       ],
 
-      '/kubernetes': [
+      'etcd': [
         {
-          text: 'kubernetes', link: '/kubernetes/index',
-        },
-        {
-          text: '集群高可用', 
-          collapsed: false,
+          text: '简介', link: '/etcd/index',
           items: [
-            { text: 'Kubeasz', link: '/kubernetes/kubeasz' },
-            { text: 'Kubeadm', link: '/kubernetes/Kubeadm' },
-          ]
-        },
-        {
-          text: 'Dashboard', 
-          collapsed: false,
-          items: [
-            { text: 'Kuboard', link: 'kubernetes/kuboard' },
-            { text: 'Dashboard', link: '/kubernetes/dashboard' },
-          ]
-        },
-        {
-          text: '资源对象', 
-          collapsed: false,
-          items: [
-            { text: 'Pod', link: '/kubernetes/pod' },
-            { text: 'ConfigMap', link: '/kubernetes/configmap' },
+            { text: '安装', link: '/etcd/install' },
+            { text: '命令', link: '/etcd/command' },
+
           ]
         }
       ],
+      
 
       '/other': [
         {
@@ -122,22 +71,34 @@ export default{
         }
       ],
 
-      '/gitlab': [
+      '/cicd': [
         {
-          text: 'Gitlab', link: '/gitlab/index',
-          // collapsed: false,
           items: [
-            // { text: 'Gitlab', link: '/gitlab/index' },
+            { text: 'CI/CD', link: '/cicd/index' },
+            {
+              text: 'Gitlab', 
+              collapsed: false,
+              items: [
+                { text: '容器', link: '/docker/container' },
+              ]
+            },
+            {
+              text: 'Ansible', 
+              collapsed: false,
+              items: [
+                { text: 'CentOS', link: '/docker/install-centos' },
+                { text: 'Ubuntu', link: '/docker/install_ubuntu' },
+              ]
+            },
+            {
+              text: 'Jenkins', 
+              collapsed: false,
+              items: [
+                { text: 'CentOS', link: '/docker/install-centos' },
+                { text: 'Ubuntu', link: '/docker/install_ubuntu' },
+              ]
+            },              
           ]
         }
-      ],    
-
-      '/python': [
-        {
-          text: 'Python', link: '/python/index',
-          items: [
-            { text: 'psutil', link: '/python/psutil' },
-          ]
-        }
-      ],      
+      ],       
 }

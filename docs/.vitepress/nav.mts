@@ -1,33 +1,21 @@
 export default[
     { text: 'Home', link: '/' },
+    { text: 'Docker', link: '/docker/index' },
+    { text: 'Kubernetes', link: '/kubernetes/index' },
+    { text: 'Prometheus', link: '/prometheus/index' },
     { text: 'Linux', link: '/linux/index' },
     { text: 'Python', link: '/python/index' },
+    { text: 'CI/CD', link: '/cicd/ansible' },    
     {
-      text: 'Cloud Native',
-      items: [
-        { text: 'Docker', link: '/docker/index' },
-        { text: 'Kubernetes', link: '/kubernetes/index' },
-        { text: 'Prometheus', link: '/prometheus/index' },
-      ]
-    },
-    {
-      text: 'CI/CD',
-      items: [
-        { text: 'Gitlab', link: '/gitlab/index' },
-        { text: 'Ansible', link: '/cicd/ansible' },
-        { text: 'Jenkins', link: '/cicd/jenkins' },
-      ]
-    },
-    {
-      text: '中间件',
+      text: '更多',
       items: [
         { text: 'ELK', link: '/elk/index' },
         { text: 'MySQL', link: '/mysql/index' },
         { text: 'Nginx', link: '/nginx/index' },
         { text: 'Kafka', link: '/other/kafka' },
+        { text: 'Etcd', link: '/etcd/index' },
       ]
     },
-    { text: '其他', link: '/other/tools' }
 ]
 
       

@@ -3,15 +3,15 @@
 layout: home
 
 hero:
-  name: "文档库"
+  name: "Jingshulin"
   text: "学习、记录、进步"
-  # tagline: My great project tagline
+  tagline: The best preparation for tomorrow is doing your best today
   actions:
     - theme: brand
-      text: 博客
-      link: https://slinjing.github.io/
+      text: Github
+      link: https://github.com/slinjing
     - theme: alt
-      text: 邮箱
+      text: Email
       link: mailto:878057672@qq.com
 
 features:
