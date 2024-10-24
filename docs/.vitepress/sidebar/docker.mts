@@ -3,7 +3,7 @@ export default [
         // text: 'Docker',
         // collapsed: false,
         items: [
-            { text: '简介', link: '/docker/index_back' },
+            { text: 'Docker', link: '/docker/index_back' },
             {
                 text: '基础知识',
                 collapsed: false,
