@@ -1,6 +1,7 @@
 # 安装
 `etcd`基于`Go`语言实现，因此，可以从[项目主页](https://github.com/etcd-io/etcd)下载源代码自行编译，也可以下载编译好的二进制文件，或者使用`Docker`镜像运行。
 
+
 ## 二进制下载
 编译好的二进制文件都在 [github.com/etcd-io/etcd/releases](https://github.com/etcd-io/etcd/releases) 页面，选择需要的版本，或通过下载工具下载。
 
