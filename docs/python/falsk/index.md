@@ -36,7 +36,7 @@ $ pip install Flask
 ```
 
 创建一个Python文件（例如app.py）并输入以下代码：
-```pyhon
+```python
 from flask import Flask
  
 app = Flask(__name__)

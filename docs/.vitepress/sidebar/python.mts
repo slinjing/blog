@@ -1,7 +1,6 @@
 export default [
     {
         text: 'Python', link: '/python/index',
-        collapsed: false,
         items: [
             { text: '安装', link: '/python/install' },
             { text: '变量', link: '/python/variable' },

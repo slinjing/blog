@@ -1,4 +1,6 @@
 # Kubernetes
+![](/kubernetes/kubernetes.png)
+
 Kubernetes 是一个开源的容器编排引擎，用来对容器化应用进行自动化部署、扩缩和管理。该项目托管在 CNCF。Kubernetes 的目标是让部署容器化的应用简单并且高效，它提供了应用部署，规划，更新，维护的一种机制。
 
 官网：https://kubernetes.io
