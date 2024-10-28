@@ -49,4 +49,4 @@ $ sudo docker run --privileged --name some-docker -v /my/own/var-lib-docker:/var
 ```
 
 ## 使用 Sysbox 运行时
-[Sysbox](/https://github.com/nestybox/sysbox) 是 nestybox 公司旗下的一款产品，当允许 Docker 容器充当虚拟服务器， 能够在其中运行 Systemd、Docker 和 Kubernetes 等软件，操作容易且具有适当的隔离。
+[Sysbox](https://github.com/nestybox/sysbox) 是 nestybox 公司旗下的一款产品，当允许 Docker 容器充当虚拟服务器， 能够在其中运行 Systemd、Docker 和 Kubernetes 等软件，操作容易且具有适当的隔离。
