@@ -7,9 +7,9 @@ export default[
     // { text: 'Python', link: '/python/index' },
     // { text: 'CI/CD', link: '/cicd/ansible' },    
     {
-      text: '更多',
+      text: 'More',
       items: [
-        { text: 'LibreNMS', link: '/other/librenms' },
+        { text: 'LibreNMS', link: '/librenms/index' },
         // { text: 'ELK', link: '/elk/index' },
         // { text: 'MySQL', link: '/mysql/index' },
         // { text: 'Nginx', link: '/nginx/index' },

@@ -2,12 +2,14 @@ import docker from './sidebar/docker.mts'
 import kubernetes from './sidebar/kubernetes.mts'
 import python from './sidebar/python.mts'
 import linux from './sidebar/linux.mts'
+import librenms from './sidebar/librenms.mts'
 
 export default{
     '/docker': docker,
     '/kubernetes': kubernetes,
     '/python': python,
     '/linux': linux,
+    '/librenms': librenms,
     '/prometheus': [
         {
           text: 'Prometheus', link: '/prometheus/index',
