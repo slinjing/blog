@@ -56,16 +56,17 @@ export default{
 
       '/other': [
         {
-          text: '其他',
+          text: '更多',
           items: [
-            { text: 'Yaml', link: '/other/yaml' },
-            { text: 'Hexo', link: '/other/hexo' },
-            { text: 'RAID', link: '/other/raid' },
-            { text: 'Tools', link: '/other/tools' },
-            { text: 'Harbor', link: '/other/harbor' },
-            { text: 'Markdown', link: '/other/markdown' },
-            { text: 'SSR', link: '/other/ssr' },
-            { text: '交换机 NTP 时钟同步', link: '/other/net' },
+            { text: 'LibreNMS', link: '/other/librenms' },
+            // { text: 'Yaml', link: '/other/yaml' },
+            // { text: 'Hexo', link: '/other/hexo' },
+            // { text: 'RAID', link: '/other/raid' },
+            // { text: 'Tools', link: '/other/tools' },
+            // { text: 'Harbor', link: '/other/harbor' },
+            // { text: 'Markdown', link: '/other/markdown' },
+            // { text: 'SSR', link: '/other/ssr' },
+            // { text: '交换机 NTP 时钟同步', link: '/other/net' },
             
           ]
         }

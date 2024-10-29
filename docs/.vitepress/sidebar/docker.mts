@@ -20,10 +20,17 @@ export default [
                 ]
             },
             { text: '镜像加速', link: '/docker/mirror' },
+            {
+                text: 'Dockerfile',
+                collapsed: false,
+                items: [
+                    { text: 'Dockerfile', link: '/docker/docker_file' },
+                    { text: 'Dockerfile 指令', link: '/docker/dockerfile_cmd' },
+                ]
+            },
             { text: '网络', link: '/docker/docker-network' },
             { text: '存储', link: '/docker/docker-storage' },
             { text: 'Portainer', link: '/docker/portainer' },
-            { text: 'Dockerfile', link: '/docker/docker-file' },
             { text: 'Docker Compose', link: 'docker/docker-compose' },
             { text: 'Docker in Docker', link: 'docker/docker-in-docker' },           
 
