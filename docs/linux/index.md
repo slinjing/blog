@@ -1,4 +1,7 @@
 # Linux
+
+![](/linux/linux.png)
+
 Linux 是一套免费使用和自由传播的类 Unix 操作系统，是一个遵循 POSIX 的多用户、多任务、支持多线程和多 CPU 的操作系统。其内核由林纳斯·本纳第克特·托瓦兹（Linus Benedict Torvalds）于1991年10月5日首次发布。
 
 

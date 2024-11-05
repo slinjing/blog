@@ -3,6 +3,7 @@ import kubernetes from './sidebar/kubernetes.mts'
 import python from './sidebar/python.mts'
 import linux from './sidebar/linux.mts'
 import librenms from './sidebar/librenms.mts'
+import greenbone from './sidebar/greenbone.mts'
 
 export default{
     '/docker': docker,
@@ -10,6 +11,7 @@ export default{
     '/python': python,
     '/linux': linux,
     '/librenms': librenms,
+    '/greenbone': greenbone,
     '/prometheus': [
         {
           text: 'Prometheus', link: '/prometheus/index',

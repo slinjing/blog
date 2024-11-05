@@ -1,6 +1,6 @@
 # Docker 安装 LibreNMS
 
-前往 [docker compose文件地址](https://github.com/slinjing/docs/tree/main/docker-compose/librenms-docker) 下载 compose 文件后，修改`.env`文件，设置数据库密码，最后执行以下命令运行：
+前往 [docker compose 文件地址](https://github.com/slinjing/docs/tree/main/docker-compose/librenms) 下载 compose 文件后，修改`.env`文件，设置数据库密码，最后执行以下命令运行：
 ```shell
 $ sudo docker-compose up -d
 ```
