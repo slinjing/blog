@@ -11,7 +11,7 @@
 # |  |  |  |  |
 # *  *  *  *  * user-name  command to be executed
 ```
-![img](/crontab.jpeg)
+![img](/linux/crontab.jpeg)
 
 >命令
 ```shell
