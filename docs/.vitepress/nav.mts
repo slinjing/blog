@@ -2,7 +2,7 @@ export default[
     { text: 'Home', link: '/' },
     { text: 'Docker', link: '/docker/index' },
     { text: 'Kubernetes', link: '/kubernetes/index' },
-    { text: 'Linux', link: '/linux/index' },
+    // { text: 'Linux', link: '/linux/index' },
     {
         text: 'More',
         collapsed: false,
