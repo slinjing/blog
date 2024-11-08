@@ -2,15 +2,7 @@ export default [
     {
         items: [
             { text: 'Docker', link: '/docker/index' },
-            {
-                text: '基础知识',
-                collapsed: false,
-                items: [
-                    { text: '容器', link: '/docker/container' },
-                    { text: '镜像', link: '/docker/image' },
-                    { text: '仓库', link: '/docker/registry' },
-                ]
-            },
+            { text: '基础概念', link: '/docker/01' },
             {
                 text: '安装',
                 collapsed: false,
@@ -21,11 +13,20 @@ export default [
             },
             { text: '镜像加速', link: '/docker/mirror' },
             {
+                text: '私有仓库',
+                collapsed: false,
+                items: [
+                    { text: 'Registry', link: '/docker/registry' },
+                    { text: 'Harbor', link: '/docker/harbor' },
+                ]
+            },
+            {
                 text: 'Dockerfile',
                 collapsed: false,
                 items: [
+                    { text: '定制镜像', link: '/docker/build' },
                     { text: 'Dockerfile', link: '/docker/docker_file' },
-                    { text: 'Dockerfile 指令', link: '/docker/dockerfile_cmd' },
+                    { text: '常用指令', link: '/docker/dockerfile1' },
                 ]
             },
             { text: '网络', link: '/docker/docker-network' },

@@ -5,6 +5,7 @@ import linux from './sidebar/linux.mts'
 import librenms from './sidebar/librenms.mts'
 import greenbone from './sidebar/greenbone.mts'
 
+
 export default{
     '/docker': docker,
     '/kubernetes': kubernetes,

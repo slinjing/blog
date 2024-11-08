@@ -5,61 +5,8 @@ Kubeadm 是一个搭建 Kubernetes 集群的工具，该工具可以方便、快
 
 ![img](/kubeadm-1.png)
 
-## 初始化系统
-Kubernetes 集群所有节点都要执行，不能使用 localhost 作为节点的名字，CPU 内核数量不能低于2。
 
-
-### 关闭防火墙
-```shell
-systemctl stop firewalld
-systemctl disable firewalld
-```
-
-### 关闭 SeLinux
-```shell
-setenforce 0
-sed -i "s/SELINUX=enforcing/SELINUX=disabled/g" /etc/selinux/config
-```
-
-### 关闭 Swap
-```shell
-swapoff -a
-sed -ri 's/.*swap.*/#&/' /etc/fstab
-```
-
-### 修改 /etc/sysctl.conf
-```shell
-# 如果有配置，则修改
-sed -i "s#^net.ipv4.ip_forward.*#net.ipv4.ip_forward=1#g"  /etc/sysctl.conf
-sed -i "s#^net.bridge.bridge-nf-call-ip6tables.*#net.bridge.bridge-nf-call-ip6tables=1#g"  /etc/sysctl.conf
-sed -i "s#^net.bridge.bridge-nf-call-iptables.*#net.bridge.bridge-nf-call-iptables=1#g"  /etc/sysctl.conf
-# 可能没有，追加
-echo "net.ipv4.ip_forward = 1" >> /etc/sysctl.conf
-echo "net.bridge.bridge-nf-call-ip6tables = 1" >> /etc/sysctl.conf
-echo "net.bridge.bridge-nf-call-iptables = 1" >> /etc/sysctl.conf
-# 执行命令以应用
-sysctl -p
-```
-
-### 设置 Yum 仓库
-```shell
-yum install -y yum-utils device-mapper-persistent-data lvm2
-yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
-```
-
-
-### 安装并启动 Docker
-```shell
-yum -y install docker-ce
-systemctl enable docker --now
-```
-
-### Docker 镜像加速
-```shell
-curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://f1361db2.m.daocloud.io
-```
-
-### 配置K8S的yum源
+## 配置 K8S yum 源
 ```shell
 cat <<EOF > /etc/yum.repos.d/kubernetes.repo
 [kubernetes]
@@ -73,13 +20,13 @@ gpgkey=http://mirrors.aliyun.com/kubernetes/yum/doc/yum-key.gpg
 EOF
 ```
 
-### 安装kubelet、kubeadm、kubectl
+## 安装kubelet、kubeadm、kubectl
 ```shell
 yum install -y kubelet-1.23.6 kubeadm-1.23.6 kubectl-1.23.6
 ```
 
 
-### 重启 docker，并启动 kubelet
+## 重启 docker，并启动 kubelet
 ```shell
 systemctl daemon-reload
 systemctl restart docker
@@ -101,7 +48,7 @@ kubeadm init \
       --pod-network-cidr=10.244.0.0/16
 ```
 
-### 检查 master 初始化结果
+## 检查 master 初始化结果
 ```shell
 # 只在 master 节点执行
 
@@ -112,3 +59,41 @@ watch kubectl get pod -n kube-system -o wide
 kubectl get nodes -o wide
 
 ```
+
+安装成功后，复制如下配置并执行
+```shell
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
+kubectl get nodes
+```
+
+若出现错误排错之后先通过下面命令重置之后再执行init命令：
+```shell
+kubeadm reset
+```
+
+## node 节点加入集群
+在 k8s-node 节点执行，下方命令是 k8s master 控制台初始化成功后复制的 join 命令
+```shell
+kubeadm join 192.168.33.131:6443 --token 6tmev4.a1m9ks62q0j3t868 \
+        --discovery-token-ca-cert-hash sha256:6361880a7c63c76dbf17e4a1575869dc09206f84aedb569c6652747c97641516
+```
+如果初始化的 token 不小心清空了，可以通过如下命令获取或者重新申请，如果 token 已经过期，就重新申请
+```shell
+kubeadm token create
+```
+token 没有过期可以通过如下命令获取
+```shell
+kubeadm token list
+```
+获取 --discovery-token-ca-cert-hash 值，得到值后需要在前面拼接上 sha256:
+```shell
+openssl x509 -pubkey -in /etc/kubernetes/pki/ca.crt | openssl rsa -pubin -outform der 2>/dev/null | openssl dgst -sha256 -hex | sed 's/^.* //'
+```
+
+## 验证
+```shell
+kubectl get node
+```
+到 master 节点查看状态，都是 ready 说明没有问题，此时执行`kubectl get po -n kube-system`可以发现 coredns 未就绪这是因为网络问题接下来安装好网络插件就可以了。
